@@ -1,0 +1,36 @@
+{
+  "engines": {
+    "npm": ">=10.2.4",
+    "node": ">=21.6.2"
+  },
+  "name": "playwright_boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "browser install": "npx playwright install",
+    "headed": "npx playwright test --ui",
+    "headless": "npx playwright test",
+    "lint": "npx lint-staged"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@playwright/test": "^1.42.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "lint-staged": "^15.2.2"
+  },
+  "lint-staged": {
+    "*js": [
+      "eslint --fix"
+    ],
+    ".json": [
+      "estlint --fix"
+    ]
+  }
+}
